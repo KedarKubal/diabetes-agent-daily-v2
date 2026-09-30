@@ -1,0 +1,54 @@
+{
+  "sample": {
+    "patient_id": "P-088",
+    "cohort": "oral_add",
+    "monthly_pretest_mgdl": 142.0,
+    "days_since_pretest": 18,
+    "red_ppg": 0.18,
+    "ir_ppg": 0.22,
+    "skin_temp_c": 33.4,
+    "true_glucose_mgdl": 151.0
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "draft": {
+        "predicted_mgdl": 115.2,
+        "implicit_a1c": 6.75,
+        "red_weight": 0.78,
+        "ir_weight": 0.22,
+        "notes": "cohort=oral_add red_w=0.78 ir_w=0.22 optical=108.1 a1c=6.75",
+        "pass_index": 1
+      },
+      "critique": {
+        "passed": false,
+        "reasons": [
+          "FAIL MARD-vs-monthly-pretest 18.9% > 13.0% for cohort oral_add",
+          "OK implicit A1c 6.75"
+        ],
+        "mard_vs_pretest": 18.87
+      }
+    },
+    {
+      "pass": 2,
+      "draft": {
+        "predicted_mgdl": 127.8,
+        "implicit_a1c": 6.66,
+        "red_weight": 0.66,
+        "ir_weight": 0.34,
+        "notes": "cohort=oral_add red_w=0.66 ir_w=0.34 optical=104.8 a1c=6.66",
+        "pass_index": 2
+      },
+      "critique": {
+        "passed": true,
+        "reasons": [
+          "OK MARD-vs-pretest 10.0% <= 13.0%",
+          "OK implicit A1c 6.66"
+        ],
+        "mard_vs_pretest": 10.0
+      }
+    }
+  ],
+  "held_out_true_mgdl": 151.0,
+  "final_passed": true
+}
