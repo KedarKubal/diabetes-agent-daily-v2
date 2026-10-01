@@ -1,0 +1,50 @@
+{
+  "sample": {
+    "participant_id": "P-310",
+    "bmi": 33.4,
+    "homa_ir": 3.8,
+    "fto_risk_allele": true,
+    "baseline_hba1c_mmol": 62.0,
+    "stratum": "high_bmi+high_ir+fto_risk"
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "nudge": {
+        "participant_id": "P-310",
+        "stratum": "high_bmi+high_ir+fto_risk",
+        "activity_min_per_day": 20,
+        "eating_restraint_score": 4,
+        "expected_hba1c_drop_mmol": 4.0,
+        "message": "high_bmi+high_ir+fto_risk: 20 min brisk walking/day and cognitive eating-restraint score 4/10. Expected HbA1c change -4.0 mmol/mol over follow-up. No medication change.",
+        "medication_change": "none",
+        "revision_notes": ["pass-1 generic dose, ignoring phenotype"]
+      },
+      "verifier": {
+        "passed": false,
+        "reasons": [
+          "activity 20 < 40 required for high-BMI + high-IR responders",
+          "restraint 4 < 7 required for high-BMI + high-IR responders"
+        ]
+      }
+    },
+    {
+      "pass": 2,
+      "nudge": {
+        "participant_id": "P-310",
+        "stratum": "high_bmi+high_ir+fto_risk",
+        "activity_min_per_day": 40,
+        "eating_restraint_score": 7,
+        "expected_hba1c_drop_mmol": 4.0,
+        "message": "high_bmi+high_ir+fto_risk: 40 min brisk walking/day and cognitive eating-restraint score 7/10. Expected HbA1c change -4.0 mmol/mol over follow-up. No medication change.",
+        "medication_change": "none",
+        "revision_notes": [
+          "revised from verifier critique",
+          "activity set to 40 for stratum",
+          "restraint set to 7"
+        ]
+      },
+      "verifier": {"passed": true, "reasons": ["all criteria met"]}
+    }
+  ]
+}
