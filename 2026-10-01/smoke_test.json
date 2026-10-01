@@ -17,7 +17,7 @@
         "implicit_a1c": 6.75,
         "red_weight": 0.78,
         "ir_weight": 0.22,
-        "notes": "cohort=oral_add red_w=0.78 ir_w=0.22 optical=108.1 a1c=6.75",
+        "notes": "cohort=oral_add red_w=0.78 ir_w=0.22 optical=104.0 a1c=6.75",
         "pass_index": 1
       },
       "critique": {
