@@ -1,0 +1,33 @@
+{
+  "sample_id": "P-441",
+  "note": "10-day SMBG + SBP sequence with 3 readings <70 in last 3 days and SBP drop 132->108",
+  "passes": [
+    {
+      "pass": 1,
+      "candidate": {
+        "risk_label": "low",
+        "score": 22.0,
+        "driving_feature": "mean_glucose",
+        "action": "continue usual logging",
+        "rationale": "No escalation on first pass."
+      },
+      "verifier_passed": false,
+      "reasons": [
+        "escalate: >=2 lows in 3 days requires high",
+        "action must include a carb/check plan"
+      ]
+    },
+    {
+      "pass": 2,
+      "candidate": {
+        "risk_label": "high",
+        "score": 87.0,
+        "driving_feature": "sbp_drop_plus_lows",
+        "action": "next-day hypo plan: check glucose before breakfast, 15 g carb if <80, hold extra activity, message caregiver if a second low occurs",
+        "rationale": "Revised from verifier critique."
+      },
+      "verifier_passed": true,
+      "reasons": ["meets success criterion"]
+    }
+  ]
+}
