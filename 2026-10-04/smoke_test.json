@@ -1,0 +1,57 @@
+{
+  "sample": {
+    "person_id": "P-514",
+    "fasting_proxy": 108.0,
+    "peak_delta": 62.0,
+    "recovery_slope": 0.35,
+    "mean_steps": 4200.0
+  },
+  "log": [
+    {
+      "pass": 1,
+      "output": {
+        "person_id": "P-514",
+        "label": "normoglycemia",
+        "probability": 0.31,
+        "cited_drivers": [
+          "step_count"
+        ],
+        "rationale": "Estimated glucose 108 mg/dL looks fine; activity is the main signal.",
+        "next_step": "Repeat a fingerstick glucose tomorrow."
+      },
+      "verdict": {
+        "pass": false,
+        "reasons": [
+          "label normoglycemia != expected prediabetes from breaches ['fasting_proxy', 'peak_delta', 'recovery_slope']",
+          "cited_drivers ['step_count'] must be a subset of breaches ['fasting_proxy', 'peak_delta', 'recovery_slope']",
+          "screen must not emit a glucose point estimate"
+        ]
+      }
+    },
+    {
+      "pass": 2,
+      "output": {
+        "person_id": "P-514",
+        "label": "prediabetes",
+        "probability": 0.94,
+        "cited_drivers": [
+          "fasting_proxy",
+          "peak_delta",
+          "recovery_slope"
+        ],
+        "rationale": "Person-level screen from bootstrap-style curve features, no glucose point estimate. fasting_proxy 108 >= 100; peak_delta 62 >= 50; recovery_slope 0.35 >= 0.25 (slow recovery)",
+        "next_step": "Offer confirmatory OGTT or lab HbA1c; do not treat this screen as a diagnosis."
+      },
+      "verdict": {
+        "pass": true,
+        "reasons": [
+          "ok"
+        ]
+      }
+    }
+  ],
+  "before_label": "normoglycemia",
+  "after_label": "prediabetes",
+  "before_pass": false,
+  "after_pass": true
+}
