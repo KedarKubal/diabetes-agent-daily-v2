@@ -1,0 +1,22 @@
+{
+  "sample": {
+    "patient_id": "P-807",
+    "gold_score": 2,
+    "tbr_below_54_pct": 2.4,
+    "cv_pct": 41.0,
+    "nocturnal_low_count": 5,
+    "tir_pct": 61.0
+  },
+  "before": {
+    "risk_band": "low",
+    "clinician_action": "routine_followup",
+    "features_used": ["gold_score"]
+  },
+  "after": {
+    "risk_band": "high_discordance",
+    "clinician_action": "caregiver_check",
+    "features_used": ["gold_score", "tbr_below_54", "cv", "nocturnal_low"]
+  },
+  "improved": true,
+  "verifier_criterion": "intact Gold AND >=2 CGM risk features cited AND risk_band=high_discordance AND concrete clinician_action"
+}
