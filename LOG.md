@@ -8,3 +8,4 @@
 2026-10-05 | BCT-constrained glycemic nudge (problem solving + reward/threat) | Smoke-tested P-605: pass1 self-monitor-only failed; pass2 obstacle branch + coffee contingency passed.
 2026-10-06 | Context-horizon hypo gate (IOB + carb residual + activity, 60 min) | Smoke-tested P-718: pass1 slope-only failed; pass2 high/1.0 with 15 g correction passed.
 2026-10-07 | CGM vs Gold awareness discordance flag (GVU) | Smoke-tested P-807: pass1 low/routine_followup failed; pass2 high_discordance/caregiver_check passed.
+2026-10-08 | Composite-outcome DPP closer (missing limb gate) | Smoke-tested P-908: pass1 activity nudge failed (limb already met); pass2 weight-loss gap 3.37 passed.

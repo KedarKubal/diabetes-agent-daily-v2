@@ -1,0 +1,45 @@
+[
+  {
+    "pass_n": 1,
+    "draft": {
+      "patient_id": "P-908",
+      "component": "activity_min_per_week",
+      "gap": -10.0,
+      "action": "Add a 20-minute evening walk three days this week.",
+      "check_7d": "Log total walking minutes.",
+      "pass_note": "generic activity nudge"
+    },
+    "verdict": {
+      "pass": false,
+      "reasons": [
+        "activity_min_per_week already met (gap -10.0)",
+        "check_7d missing a 7-day metric"
+      ],
+      "computed_gaps": {
+        "weight_loss_pct": 3.37,
+        "activity_min_per_week": -10.0,
+        "hba1c_drop": 0.15
+      }
+    }
+  },
+  {
+    "pass_n": 2,
+    "draft": {
+      "patient_id": "P-908",
+      "component": "weight_loss_pct",
+      "gap": 3.37,
+      "action": "Replace the daily afternoon soda with a 400 kcal plate (protein + vegetables) on 5 of 7 days to close a 3.37 percentage-point weight-loss gap.",
+      "check_7d": "Weigh on day 7; recompute percent loss from baseline.",
+      "pass_note": "critique-conditioned"
+    },
+    "verdict": {
+      "pass": true,
+      "reasons": ["ok"],
+      "computed_gaps": {
+        "weight_loss_pct": 3.37,
+        "activity_min_per_week": -10.0,
+        "hba1c_drop": 0.15
+      }
+    }
+  }
+]
