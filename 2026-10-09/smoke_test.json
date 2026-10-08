@@ -1,0 +1,16 @@
+{
+  "sample_id": "BR-1009",
+  "before": {
+    "label": "diabetes_screen",
+    "effective_lod_ppm": 3.26,
+    "corrected_acetone_ppm": 3.0,
+    "pass": false
+  },
+  "after": {
+    "label": "prediabetes_screen",
+    "effective_lod_ppm": 1.087,
+    "corrected_acetone_ppm": 2.795,
+    "selectivity_vs_ethanol": 6.0,
+    "pass": true
+  }
+}
