@@ -10,3 +10,4 @@
 2026-10-07 | CGM vs Gold awareness discordance flag (GVU) | Smoke-tested P-807: pass1 low/routine_followup failed; pass2 high_discordance/caregiver_check passed.
 2026-10-08 | Composite-outcome DPP closer (missing limb gate) | Smoke-tested P-908: pass1 activity nudge failed (limb already met); pass2 weight-loss gap 3.37 passed.
 2026-10-09 | Breath-acetone LOD + interferent selectivity gate | Smoke-tested BR-1009: pass1 diabetes_screen/LOD 3.26 failed; pass2 prediabetes_screen/LOD 1.087 passed.
+2026-10-10 | Dual-site 8-min PPG concordance gate (wrist vs in-ear) | Smoke-tested P-1010: pass1 normal/wrist-only failed; pass2 elevated_glucose_risk/0.645 passed.

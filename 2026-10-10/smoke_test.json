@@ -1,0 +1,5 @@
+{
+  "sample": "P-1010",
+  "pass1": "normal / wrist-only 0.568 — failed (missing ear site; dual-site index 0.645 >= 0.62)",
+  "pass2": "elevated_glucose_risk / index 0.645 / site_delta 0.13 — passed"
+}
