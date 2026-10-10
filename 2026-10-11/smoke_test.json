@@ -1,0 +1,32 @@
+[
+  {
+    "pass": 1,
+    "candidate": {
+      "pass": 1,
+      "risk_level": "high",
+      "risk_score": 78.0,
+      "nudge": "High weekly hypo risk (score 78.0). Review last week's patterns and stay consistent with meals.",
+      "top_feature": "lbgi"
+    },
+    "verifier": {
+      "pass": false,
+      "reason": "nudge too generic — does not address LBGI/TBR/nocturnal correction"
+    },
+    "timestamp": "2026-10-10T19:30:53.660431"
+  },
+  {
+    "pass": 2,
+    "candidate": {
+      "pass": 2,
+      "risk_level": "high",
+      "risk_score": 78.0,
+      "nudge": "High risk this week (score 78.0). Your LBGI is elevated — plan a 15g fast-acting carb correction before bed if CGM trend is downward after 10pm. Also reduce basal 10% on high-activity days.",
+      "top_feature": "lbgi"
+    },
+    "verifier": {
+      "pass": true,
+      "reason": "Meets criteria: correct level, score, and actionable nudge"
+    },
+    "timestamp": "2026-10-10T19:30:53.660456"
+  }
+]

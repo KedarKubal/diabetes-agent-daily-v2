@@ -11,3 +11,4 @@
 2026-10-08 | Composite-outcome DPP closer (missing limb gate) | Smoke-tested P-908: pass1 activity nudge failed (limb already met); pass2 weight-loss gap 3.37 passed.
 2026-10-09 | Breath-acetone LOD + interferent selectivity gate | Smoke-tested BR-1009: pass1 diabetes_screen/LOD 3.26 failed; pass2 prediabetes_screen/LOD 1.087 passed.
 2026-10-10 | Dual-site 8-min PPG concordance gate (wrist vs in-ear) | Smoke-tested P-1010: pass1 normal/wrist-only failed; pass2 elevated_glucose_risk/0.645 passed.
+2026-10-11 | Feature-driven weekly CGM hypo risk + actionable nudge (LBGI/TBR gate) | Smoke-tested P-1111: pass1 generic nudge failed; pass2 high/78.0 with nocturnal carb correction passed.
