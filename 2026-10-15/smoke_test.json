@@ -1,0 +1,44 @@
+{
+  "sample": {
+    "id": "P-1510",
+    "ppg_variability": 0.45,
+    "expected": "diabetes_likely"
+  },
+  "results": [
+    {
+      "pass": 1,
+      "output": {
+        "risk_score": 0.65,
+        "label": "diabetes_likely",
+        "features_used": [
+          "pulse_rate",
+          "systolic_decay"
+        ],
+        "explanation": "Smartphone PPG DNN risk: 0.65"
+      },
+      "verification": {
+        "pass": false,
+        "reason": "score too low for high-risk or too high for normal; missing long-range or demographic features",
+        "critique": "missing long-range"
+      }
+    },
+    {
+      "pass": 2,
+      "output": {
+        "risk_score": 0.8,
+        "label": "diabetes_likely",
+        "features_used": [
+          "pulse_rate",
+          "systolic_decay",
+          "long_range_context_10min"
+        ],
+        "explanation": "Smartphone PPG DNN risk: 0.80"
+      },
+      "verification": {
+        "pass": true,
+        "reason": "all criteria met",
+        "critique": ""
+      }
+    }
+  ]
+}
