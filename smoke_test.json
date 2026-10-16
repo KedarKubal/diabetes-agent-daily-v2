@@ -1,57 +1,44 @@
 {
   "sample": {
-    "person_id": "P-514",
-    "fasting_proxy": 108.0,
-    "peak_delta": 62.0,
-    "recovery_slope": 0.35,
-    "mean_steps": 4200.0
+    "id": "P-1510",
+    "ppg_variability": 0.45,
+    "expected": "diabetes_likely"
   },
-  "log": [
+  "results": [
     {
       "pass": 1,
       "output": {
-        "person_id": "P-514",
-        "label": "normoglycemia",
-        "probability": 0.31,
-        "cited_drivers": [
-          "step_count"
+        "risk_score": 0.65,
+        "label": "diabetes_likely",
+        "features_used": [
+          "pulse_rate",
+          "systolic_decay"
         ],
-        "rationale": "Estimated glucose 108 mg/dL looks fine; activity is the main signal.",
-        "next_step": "Repeat a fingerstick glucose tomorrow."
+        "explanation": "Smartphone PPG DNN risk: 0.65"
       },
-      "verdict": {
+      "verification": {
         "pass": false,
-        "reasons": [
-          "label normoglycemia != expected prediabetes from breaches ['fasting_proxy', 'peak_delta', 'recovery_slope']",
-          "cited_drivers ['step_count'] must be a subset of breaches ['fasting_proxy', 'peak_delta', 'recovery_slope']",
-          "screen must not emit a glucose point estimate"
-        ]
+        "reason": "score too low for high-risk or too high for normal; missing long-range or demographic features",
+        "critique": "missing long-range"
       }
     },
     {
       "pass": 2,
       "output": {
-        "person_id": "P-514",
-        "label": "prediabetes",
-        "probability": 0.94,
-        "cited_drivers": [
-          "fasting_proxy",
-          "peak_delta",
-          "recovery_slope"
+        "risk_score": 0.8,
+        "label": "diabetes_likely",
+        "features_used": [
+          "pulse_rate",
+          "systolic_decay",
+          "long_range_context_10min"
         ],
-        "rationale": "Person-level screen from bootstrap-style curve features, no glucose point estimate. fasting_proxy 108 >= 100; peak_delta 62 >= 50; recovery_slope 0.35 >= 0.25 (slow recovery)",
-        "next_step": "Offer confirmatory OGTT or lab HbA1c; do not treat this screen as a diagnosis."
+        "explanation": "Smartphone PPG DNN risk: 0.80"
       },
-      "verdict": {
+      "verification": {
         "pass": true,
-        "reasons": [
-          "ok"
-        ]
+        "reason": "all criteria met",
+        "critique": ""
       }
     }
-  ],
-  "before_label": "normoglycemia",
-  "after_label": "prediabetes",
-  "before_pass": false,
-  "after_pass": true
+  ]
 }
