@@ -15,3 +15,4 @@
 2026-10-14 | Week-ahead CGM hypo risk + specific nocturnal nudge (GVU) | Smoke-tested P-1410: pass1 generic/63.8 failed; pass2 high/79.0 with 15g nocturnal carb passed.
 2026-10-15 | Smartphone-camera PPG digital biomarker GVU for diabetes detection (long-range context) | Smoke-tested P-1510: pass1 0.65 missing long-range failed; pass2 0.80 + long_range_context_10min passed.
 2026-10-16 | PPG digital biomarker GVU for early detection with long-range temporal features | Smoke-tested sample: pass1 short_segment failed verifier; pass2 long_range_context_10min with score 0.80 passed.
+2026-10-18 | Phenotype-routed lifestyle dose GVU (BMI/IR/FTO) for digital therapeutics | Smoke-tested P-1810: pass1 conservative 15min/restr4 drop0.15 failed; pass2 40min/restr6 drop0.83 passed.
