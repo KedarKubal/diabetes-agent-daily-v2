@@ -1,0 +1,47 @@
+{
+  "patient": {
+    "id": "P-1910",
+    "age": 58,
+    "bmi": 29.5,
+    "ppg_hrv_rmssd": 22,
+    "ppg_amplitude_ratio": 1.35,
+    "has_long_range_ppg": true
+  },
+  "results": [
+    {
+      "pass": 1,
+      "output": {
+        "risk_score": 0.92,
+        "risk_level": "elevated",
+        "features_used": [
+          "age",
+          "bmi",
+          "hrv_rmssd",
+          "amplitude_ratio"
+        ],
+        "recommendation": "Consider confirmatory HbA1c if elevated",
+        "pass": 1
+      },
+      "passed": false,
+      "reason": "FAIL: Missing long-range temporal context feature from PPG signal."
+    },
+    {
+      "pass": 2,
+      "output": {
+        "risk_score": 0.97,
+        "risk_level": "elevated",
+        "features_used": [
+          "age",
+          "bmi",
+          "hrv_rmssd",
+          "amplitude_ratio",
+          "long_range_context"
+        ],
+        "recommendation": "Consider confirmatory HbA1c if elevated",
+        "pass": 2
+      },
+      "passed": true,
+      "reason": "PASS: Score meets threshold and includes long-range temporal context."
+    }
+  ]
+}
