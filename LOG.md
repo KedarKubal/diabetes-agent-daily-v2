@@ -17,3 +17,4 @@
 2026-10-16 | PPG digital biomarker GVU for early detection with long-range temporal features | Smoke-tested sample: pass1 short_segment failed verifier; pass2 long_range_context_10min with score 0.80 passed.
 2026-10-18 | Phenotype-routed lifestyle dose GVU (BMI/IR/FTO) for digital therapeutics | Smoke-tested P-1810: pass1 conservative 15min/restr4 drop0.15 failed; pass2 40min/restr6 drop0.83 passed.
 2026-10-19 | PPG + demographics non-invasive elevated glucose risk screen with long-range temporal context (GVU) | Smoke-tested P-1910: pass1 0.92 missing temporal failed; pass2 0.97 + long_range_context passed.
+2026-10-21 | PPG+demo early detection with heuristic consistency GVU | Smoke-tested high-risk sample: pass1 score valid and consistent, kept as minimal triage prototype.
