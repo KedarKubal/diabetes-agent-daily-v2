@@ -1,0 +1,22 @@
+[
+  {
+    "pass": 1,
+    "output": {
+      "risk_score": 0.612,
+      "reasoning": "Base heuristic from age=55, BMI=32, HR=82, var=0.15",
+      "features_used": [
+        "age",
+        "bmi",
+        "ppg_heart_rate",
+        "ppg_variability",
+        "demographics"
+      ]
+    },
+    "verification": {
+      "passed": true,
+      "critique": "All criteria met: valid range and consistent with heuristics",
+      "score": 0.612
+    },
+    "timestamp": "2026-10-22T05:30:41.206453"
+  }
+]
