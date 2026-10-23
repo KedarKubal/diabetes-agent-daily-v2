@@ -19,3 +19,4 @@
 2026-10-19 | PPG + demographics non-invasive elevated glucose risk screen with long-range temporal context (GVU) | Smoke-tested P-1910: pass1 0.92 missing temporal failed; pass2 0.97 + long_range_context passed.
 2026-10-21 | PPG+demo early detection with heuristic consistency GVU | Smoke-tested high-risk sample: pass1 score valid and consistent, kept as minimal triage prototype.
 2026-10-22 | Explainable CGM hypo/hyper risk + SHAP-style actionable explanation (GVU) | Smoke-tested P-2210: pass1 score 100 with slope+TBR + 15g carb passed verifier on first pass.
+2026-10-23 | Dual-channel HOMA-IR aptasensor early IR detection (GVU) | Smoke-tested: pass1 glucose_only/42.0 failed; pass2 dual-channel/68.5 high_prediabetes passed.
