@@ -20,3 +20,4 @@
 2026-10-21 | PPG+demo early detection with heuristic consistency GVU | Smoke-tested high-risk sample: pass1 score valid and consistent, kept as minimal triage prototype.
 2026-10-22 | Explainable CGM hypo/hyper risk + SHAP-style actionable explanation (GVU) | Smoke-tested P-2210: pass1 score 100 with slope+TBR + 15g carb passed verifier on first pass.
 2026-10-23 | Dual-channel HOMA-IR aptasensor early IR detection (GVU) | Smoke-tested: pass1 glucose_only/42.0 failed; pass2 dual-channel/68.5 high_prediabetes passed.
+2026-10-24 | Multi-modal wearable (slope+GSR+activity+TBR) hypo risk flag + specific nudge (GVU) | Smoke-tested high-risk sample: pass1 score 100/high + 15g carb nudge passed verifier on first pass.
