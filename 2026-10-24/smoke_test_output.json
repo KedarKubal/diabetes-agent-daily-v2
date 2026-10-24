@@ -1,0 +1,21 @@
+[
+  {
+    "pass": 1,
+    "candidate": {
+      "risk_score": 100,
+      "flag": "high",
+      "nudge": "High risk: consume 15g fast carbs and recheck in 15 min.",
+      "features_used": [
+        "slope",
+        "gsr",
+        "activity",
+        "tbr"
+      ]
+    },
+    "verifier": {
+      "pass": true,
+      "reasons": [],
+      "criterion": "score 0-100, flag matches score bands, high flag has specific carb nudge"
+    }
+  }
+]
