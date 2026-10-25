@@ -1,47 +1,29 @@
 {
-  "patient": {
-    "id": "P-1910",
-    "age": 58,
-    "bmi": 29.5,
-    "ppg_hrv_rmssd": 22,
-    "ppg_amplitude_ratio": 1.35,
-    "has_long_range_ppg": true
+  "sample": {
+    "recent_slope": -2.1,
+    "gsr_elevated": true,
+    "activity_recent": true,
+    "tbr_last_night": 8.5
   },
-  "results": [
+  "log": [
     {
       "pass": 1,
-      "output": {
-        "risk_score": 0.92,
-        "risk_level": "elevated",
+      "candidate": {
+        "risk_score": 100,
+        "flag": "high",
+        "nudge": "High risk: consume 15g fast carbs and recheck in 15 min.",
         "features_used": [
-          "age",
-          "bmi",
-          "hrv_rmssd",
-          "amplitude_ratio"
-        ],
-        "recommendation": "Consider confirmatory HbA1c if elevated",
-        "pass": 1
+          "slope",
+          "gsr",
+          "activity",
+          "tbr"
+        ]
       },
-      "passed": false,
-      "reason": "FAIL: Missing long-range temporal context feature from PPG signal."
-    },
-    {
-      "pass": 2,
-      "output": {
-        "risk_score": 0.97,
-        "risk_level": "elevated",
-        "features_used": [
-          "age",
-          "bmi",
-          "hrv_rmssd",
-          "amplitude_ratio",
-          "long_range_context"
-        ],
-        "recommendation": "Consider confirmatory HbA1c if elevated",
-        "pass": 2
-      },
-      "passed": true,
-      "reason": "PASS: Score meets threshold and includes long-range temporal context."
+      "verifier": {
+        "pass": true,
+        "reasons": [],
+        "criterion": "score 0-100, flag matches score bands, high flag has specific carb nudge"
+      }
     }
   ]
 }
