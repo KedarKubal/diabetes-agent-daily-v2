@@ -22,3 +22,4 @@
 2026-10-23 | Dual-channel HOMA-IR aptasensor early IR detection (GVU) | Smoke-tested: pass1 glucose_only/42.0 failed; pass2 dual-channel/68.5 high_prediabetes passed.
 2026-10-24 | Multi-modal wearable (slope+GSR+activity+TBR) hypo risk flag + specific nudge (GVU) | Smoke-tested high-risk sample: pass1 score 100/high + 15g carb nudge passed verifier on first pass.
 2026-10-25 | Explainable CGM hypo risk + nocturnal SHAP-style nudge (GVU) | Smoke-tested high-TBR sample: pass1 moderate/60.0 missing nocturnal failed; pass2 with nocturnal carb nudge passed.
+2026-10-26 | Unconstrained wearable CGM+inertial prediabetes detection (dynamic+curve features GVU) | Smoke-tested high-risk sample: pass1 0.65/normoglycemia failed; pass2 0.85/prediabetes passed after boost.
