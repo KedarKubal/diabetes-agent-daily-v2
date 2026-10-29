@@ -25,3 +25,4 @@
 2026-10-26 | Unconstrained wearable CGM+inertial prediabetes detection (dynamic+curve features GVU) | Smoke-tested high-risk sample: pass1 0.65/normoglycemia failed; pass2 0.85/prediabetes passed after boost.
 2026-10-27 | Week-ahead CGM hypo risk + specific nocturnal nudge (GVU) | Smoke-tested TBR=5.2%: pass1 high/75.7 generic failed; pass2 high/85.7 with 15g carb passed.
 2026-10-28 | Feature-engineered weekly CGM hypo risk (LBGI/TBR/CV/GRADE) + nocturnal carb nudge GVU | Smoke-tested TBR=5.5%: pass1 ~score failed specificity; pass2 high with 15g bedtime carb passed.
+2026-10-29 | Explainable CGM hypo risk + specific nocturnal carb nudge GVU | Smoke-tested TBR=5.2% nocturnal: pass1 high/96.0 generic failed; pass2 high/100 with 15g bedtime carb passed.
