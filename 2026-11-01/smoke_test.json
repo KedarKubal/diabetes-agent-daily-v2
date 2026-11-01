@@ -1,0 +1,49 @@
+{
+  "sample": {
+    "patient_id": "P-1101",
+    "mean_glucose": 145.0,
+    "std_glucose": 52.0,
+    "carb_events": 4.2,
+    "insulin_units": 28.0,
+    "hypo_events_week": 2.1,
+    "hyper_events_week": 3.5
+  },
+  "logs": [
+    {
+      "pass": 1,
+      "candidate": {
+        "isf": 64.3,
+        "icr": 16.1,
+        "predicted_std": 52.0,
+        "rationale": "Factor 1.00 from critique: initial"
+      },
+      "success": false,
+      "reason": "high variance: pred_std 52.0 > 40.0",
+      "critique_in": ""
+    },
+    {
+      "pass": 2,
+      "candidate": {
+        "isf": 77.1,
+        "icr": 19.3,
+        "predicted_std": 41.6,
+        "rationale": "Factor 1.20 from critique: high variance: pred_std 52.0 > 40.0"
+      },
+      "success": false,
+      "reason": "high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough",
+      "critique_in": "high variance: pred_std 52.0 > 40.0"
+    },
+    {
+      "pass": 3,
+      "candidate": {
+        "isf": 54.6,
+        "icr": 13.7,
+        "predicted_std": 44.2,
+        "rationale": "Factor 0.85 from critique: high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough"
+      },
+      "success": false,
+      "reason": "high variance: pred_std 44.2 > 40.0",
+      "critique_in": "high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough"
+    }
+  ]
+}
