@@ -1,32 +1,49 @@
-[
-  {
-    "pass": 1,
-    "output": {
-      "patient_id": "P-1810",
-      "activity_min_day": 15,
-      "diet_restraint": 4,
-      "predicted_hba1c_drop": 0.15,
-      "rationale": "Phenotype-routed: BMI=32.5, IR=True, FTO=True | initial"
-    },
-    "verdict": {
-      "pass": false,
-      "reason": "drop=0.15 (>=0.3), act_inc=5 (>=15), rest_inc=1 (>=2). FAIL",
-      "critique": "drop=0.15 (>=0.3), act_inc=5 (>=15), rest_inc=1 (>=2). FAIL"
-    }
+{
+  "sample": {
+    "patient_id": "P-1101",
+    "mean_glucose": 145.0,
+    "std_glucose": 52.0,
+    "carb_events": 4.2,
+    "insulin_units": 28.0,
+    "hypo_events_week": 2.1,
+    "hyper_events_week": 3.5
   },
-  {
-    "pass": 2,
-    "output": {
-      "patient_id": "P-1810",
-      "activity_min_day": 40,
-      "diet_restraint": 6,
-      "predicted_hba1c_drop": 0.83,
-      "rationale": "Phenotype-routed: BMI=32.5, IR=True, FTO=True | updated by critique"
+  "logs": [
+    {
+      "pass": 1,
+      "candidate": {
+        "isf": 64.3,
+        "icr": 16.1,
+        "predicted_std": 52.0,
+        "rationale": "Factor 1.00 from critique: initial"
+      },
+      "success": false,
+      "reason": "high variance: pred_std 52.0 > 40.0",
+      "critique_in": ""
     },
-    "verdict": {
-      "pass": true,
-      "reason": "drop=0.83 (>=0.3), act_inc=30 (>=15), rest_inc=3 (>=2). PASS",
-      "critique": ""
+    {
+      "pass": 2,
+      "candidate": {
+        "isf": 77.1,
+        "icr": 19.3,
+        "predicted_std": 41.6,
+        "rationale": "Factor 1.20 from critique: high variance: pred_std 52.0 > 40.0"
+      },
+      "success": false,
+      "reason": "high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough",
+      "critique_in": "high variance: pred_std 52.0 > 40.0"
+    },
+    {
+      "pass": 3,
+      "candidate": {
+        "isf": 54.6,
+        "icr": 13.7,
+        "predicted_std": 44.2,
+        "rationale": "Factor 0.85 from critique: high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough"
+      },
+      "success": false,
+      "reason": "high variance: pred_std 44.2 > 40.0",
+      "critique_in": "high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough"
     }
-  }
-]
+  ]
+}
