@@ -29,3 +29,4 @@
 2026-11-01 | Transformer-personalized ISF/ICR refinement via GVU loop | Smoke-tested P-1101: pass1 std=52 fail; pass3 std=44.2 closer (loop demonstrated).
 2026-11-02 | Feature-engineered weekly CGM hypo risk (LBGI/TBR/CV) + specific nocturnal carb nudge GVU | Smoke-tested P-1102: pass1 high/90.7 generic failed; pass2 high/90.7 with 15g bedtime carb passed.
 2026-11-04 | Explainable CGM hypo risk + SHAP-style nocturnal 15 g carb nudge (GVU) | Smoke-tested P-1104 TBR=6.2% slope=-1.8: pass1 high/105 (capped) with 15 g bedtime carb passed verifier on first pass.
+2026-11-05 | Feature-engineered weekly CGM hypo risk (LBGI/TBR/CV/GRADE) + specific nocturnal carb nudge GVU | Smoke-tested P-1105 TBR=5.2%: pass1 high/90.5 generic failed; pass2 high/92.5 with 15g bedtime carb passed.
