@@ -2,7 +2,7 @@
   {
     "pass": 1,
     "output": {
-      "risk_score": 0.602,
+      "risk_score": 0.607,
       "reasoning": "Base heuristic from age=55, BMI=32, HR=82, var=0.15",
       "features_used": [
         "age",
@@ -15,8 +15,8 @@
     "verification": {
       "passed": true,
       "critique": "All criteria met: valid range and consistent with heuristics",
-      "score": 0.602
+      "score": 0.607
     },
-    "timestamp": "2026-11-08T06:45:29.222040"
+    "timestamp": "2026-11-09T07:17:05.672603"
   }
 ]
