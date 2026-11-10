@@ -1,49 +1,32 @@
-{
-  "sample": {
-    "patient_id": "P-1101",
-    "mean_glucose": 145.0,
-    "std_glucose": 52.0,
-    "carb_events": 4.2,
-    "insulin_units": 28.0,
-    "hypo_events_week": 2.1,
-    "hyper_events_week": 3.5
-  },
-  "logs": [
-    {
-      "pass": 1,
-      "candidate": {
-        "isf": 64.3,
-        "icr": 16.1,
-        "predicted_std": 52.0,
-        "rationale": "Factor 1.00 from critique: initial"
-      },
-      "success": false,
-      "reason": "high variance: pred_std 52.0 > 40.0",
-      "critique_in": ""
+[
+  {
+    "pass": 1,
+    "candidate": {
+      "activity_minutes": 20,
+      "restraint_score": 4,
+      "focus_area": "general walking",
+      "projected_hba1c_drop": 0.15,
+      "rationale": "Start light to build habit"
     },
-    {
-      "pass": 2,
-      "candidate": {
-        "isf": 77.1,
-        "icr": 19.3,
-        "predicted_std": 41.6,
-        "rationale": "Factor 1.20 from critique: high variance: pred_std 52.0 > 40.0"
-      },
-      "success": false,
-      "reason": "high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough",
-      "critique_in": "high variance: pred_std 52.0 > 40.0"
-    },
-    {
-      "pass": 3,
-      "candidate": {
-        "isf": 54.6,
-        "icr": 13.7,
-        "predicted_std": 44.2,
-        "rationale": "Factor 0.85 from critique: high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough"
-      },
-      "success": false,
-      "reason": "high variance: pred_std 44.2 > 40.0",
-      "critique_in": "high variance: pred_std 41.6 > 40.0; high hypo rate but ISF not reduced enough"
+    "verifier": {
+      "pass": false,
+      "reason": "Projected drop 0.15 < 0.3; intensify activity/restraint",
+      "score": 0.15
     }
-  ]
-}
+  },
+  {
+    "pass": 2,
+    "candidate": {
+      "activity_minutes": 45,
+      "restraint_score": 7,
+      "focus_area": "post-meal walk + meal sequencing",
+      "projected_hba1c_drop": 0.42,
+      "rationale": "Intensified per critique: Projected drop 0.15 < 0.3; intensify activity/rest... to hit threshold"
+    },
+    "verifier": {
+      "pass": true,
+      "reason": "Projected drop 0.42 >= 0.3",
+      "score": 0.42
+    }
+  }
+]
