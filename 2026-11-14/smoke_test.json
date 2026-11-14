@@ -1,0 +1,21 @@
+[
+  {
+    "pass": 1,
+    "candidate": {
+      "risk_score": 0.85,
+      "risk_level": "high",
+      "nudge": "Recommend 10-min post-meal walk + HRV breathing exercise; consult clinician for lab confirmation.",
+      "features_used": [
+        "hrv",
+        "activity_var",
+        "temp_dev",
+        "sleep"
+      ]
+    },
+    "verifier": {
+      "pass": true,
+      "reason": "OK",
+      "score": 0.85
+    }
+  }
+]
