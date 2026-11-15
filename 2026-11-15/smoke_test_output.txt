@@ -1,0 +1,9 @@
+=== Smoke Test Results ===
+{
+  "risk_score": 1.0,
+  "risk_level": "high",
+  "rationale": "Age 52, BMI 32.5, HRV 25.0, PWA 0.4",
+  "pass": 1,
+  "verified": true,
+  "critique": "All criteria met"
+}
