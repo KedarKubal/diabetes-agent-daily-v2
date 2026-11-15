@@ -33,3 +33,4 @@
 2026-11-09 | Personalized digital therapeutic lifestyle nudge (activity/restraint) GVU for glycemic improvement | Smoke-tested P-1109: pass1 0.15 drop failed; pass2 0.42 with intensified post-meal walk passed.
 2026-11-13 | Agentic multimodal nocturnal hypo risk flag + explicit 15g carb nudge (GVU) | Smoke-tested P-1113 TBR=5.8% slope=-1.2 nocturnal: pass1 high/100 generic failed; pass2 high/100 with 15g correction passed.
 2026-11-14 | Multimodal wearable (HRV+activity+temp+sleep) prediabetes risk screener + specific nudge GVU | Smoke-tested high-risk (HRV=25, act_var=0.6): pass1 score 0.85/high with walk+breathing nudge passed.
+2026-11-15 | Smartphone PPG digital biomarker risk score GVU (heuristic consistency) | Smoke-tested high-BMI/age sample: pass1 score 1.0/high verified on first pass.
