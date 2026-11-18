@@ -1,0 +1,56 @@
+{
+  "sample": {
+    "patient_id": "P-1118",
+    "tbr": 5.8,
+    "slope": -1.5,
+    "iob": 1.2,
+    "nocturnal": true,
+    "notes": "High nocturnal TBR with negative slope"
+  },
+  "gvu_results": [
+    {
+      "pass": 1,
+      "output": {
+        "risk_level": "HIGH",
+        "score": 110.0,
+        "nudge": "Monitor closely and consider snack if trending low",
+        "features_used": [
+          "tbr",
+          "slope",
+          "iob",
+          "nocturnal"
+        ]
+      },
+      "verifier": {
+        "pass": false,
+        "reasons": [
+          "Must include specific 15g carb bedtime nudge for nocturnal hypo risk"
+        ],
+        "criteria": "For nocturnal + slope<-1 + TBR>4: must be HIGH + 15g carb nudge"
+      }
+    },
+    {
+      "pass": 2,
+      "output": {
+        "risk_level": "HIGH",
+        "score": 110.0,
+        "nudge": "15g fast-acting carb at bedtime + check in 15 min",
+        "features_used": [
+          "tbr",
+          "slope",
+          "iob",
+          "nocturnal",
+          "specific_nudge"
+        ]
+      },
+      "verifier": {
+        "pass": true,
+        "reasons": [
+          "Meets explicit criteria: HIGH risk + specific 15g carb for nocturnal high-risk"
+        ],
+        "criteria": "For nocturnal + slope<-1 + TBR>4: must be HIGH + 15g carb nudge"
+      }
+    }
+  ],
+  "final_pass": true
+}
