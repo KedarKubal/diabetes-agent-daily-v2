@@ -36,3 +36,4 @@
 2026-11-15 | Smartphone PPG digital biomarker risk score GVU (heuristic consistency) | Smoke-tested high-BMI/age sample: pass1 score 1.0/high verified on first pass.
 2026-11-16 | Week-ahead hypoglycemia risk flagging from CGM features with GVU self-improvement | Prototype shows Verifier forcing upward revision from LOW to MODERATE on high-risk sample
 2026-11-18 | Self-improving nocturnal hypo risk flag with specific 15g carb nudge (GVU multi-task style) | Smoke-tested P-1118 TBR=5.8 slope=-1.5 nocturnal: pass1 HIGH/110 generic failed; pass2 HIGH/110 with 15g bedtime carb passed.
+2026-11-19 | Dual-wavelength finger PPG risk score GVU (ratio+BMI/age heuristic for non-invasive elevated glucose) | Smoke-tested high-ratio sample: pass1 moderate/64.7 failed consistency; pass2 high/89.7 passed after boost.

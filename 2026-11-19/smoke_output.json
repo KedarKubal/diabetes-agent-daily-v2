@@ -1,0 +1,33 @@
+[
+  {
+    "pass": 1,
+    "output": {
+      "risk_score": 64.7,
+      "band": "moderate",
+      "features_used": [
+        "dual_wavelength_ratio",
+        "bmi",
+        "age"
+      ],
+      "rationale": "Ratio 1.38 with BMI 31.2 suggests moderate risk."
+    },
+    "passed": false,
+    "critique": "High IR/red ratio (>1.1) but score too low; boost score."
+  },
+  {
+    "pass": 2,
+    "output": {
+      "risk_score": 89.7,
+      "band": "high",
+      "features_used": [
+        "dual_wavelength_ratio",
+        "bmi",
+        "age"
+      ],
+      "rationale": "Ratio 1.38 with BMI 31.2 suggests high risk."
+    },
+    "passed": true,
+    "critique": "Meets dual-wavelength consistency and band threshold criteria."
+  }
+]
+Smoke test complete. Final band: high
