@@ -1,0 +1,6 @@
+{
+  "sample_cgm": [[0,120],[5,115],[10,108],[15,95],[20,82],[25,70],[30,62],[35,55],[40,48]],
+  "final_output": {"risk": "high", "score": 1.0, "lows_count": 3, "slope": -8.5},
+  "passes": 1,
+  "verifier": "matches criterion"
+}
