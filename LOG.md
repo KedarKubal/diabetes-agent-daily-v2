@@ -38,3 +38,4 @@
 2026-11-18 | Self-improving nocturnal hypo risk flag with specific 15g carb nudge (GVU multi-task style) | Smoke-tested P-1118 TBR=5.8 slope=-1.5 nocturnal: pass1 HIGH/110 generic failed; pass2 HIGH/110 with 15g bedtime carb passed.
 2026-11-19 | Dual-wavelength finger PPG risk score GVU (ratio+BMI/age heuristic for non-invasive elevated glucose) | Smoke-tested high-ratio sample: pass1 moderate/64.7 failed consistency; pass2 high/89.7 passed after boost.
 2026-11-20 | Feature-engineered weekly CGM hypo risk (LBGI/TBR/CV/GRADE) + specific nocturnal 15g carb nudge GVU | Smoke-tested TBR=5.5: pass1 generic failed; pass2 high with 15g bedtime carb passed.
+2026-11-21 | Multi-day CGM residual patterns (slope + low-count) for proactive hypo flags GVU | Smoke-tested descending sample ending 48 mg/dL: pass1 high/1.0 matches criterion.
